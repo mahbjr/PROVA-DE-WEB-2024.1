@@ -1,10 +1,7 @@
-Props drilling é um problema em React, que acontece quando um componente pai passa propriedades para componentes filhos, 
-e algum filho que não precisa dessa propriedade, acaba tendo que receber essa propriedade, para compartilhar com os outros filhos.
-
-Props drilling é um padrão que ocorre em aplicações React quando você precisa passar dados 
-de um componente pai para um componente filho que está localizado em um nível mais profundo 
-na árvore de componentes. O problema surge quando o componente intermediário não usa diretamente 
-os dados, mas ainda assim precisa repassá-los para seus próprios filhos.
+Props drilling  ocorre quando você precisa passar dados de um componente pai para um componente 
+filho que está localizado em um nível mais profundo na árvore de componentes. O problema surge
+quando os componentes intermediários não usam diretamente os dados, mas ainda assim precisam 
+repassá-los para seus próprios filhos.
 
 
 //exemplo não usando context:
@@ -32,8 +29,9 @@ const ComponenteFilhoB = ({ produto }) => {
 
 
 
-Usando o hook de contexto para resolver esse problema, podemos criar um contexto na aplicação e compartilhar ele 
-com todos os nossos componentes, fazendo com que somente quem realmente precisa dos dados compartilhados faça o uso.
+O hook de contexto consegue resolver esse problema, podendo criar um contexto na aplicação 
+e compartilhar ele com todos os nossos componentes, fazendo com que somente quem realmente 
+precisa dos dados compartilhados faça o uso.
 
 //exemplo usando context:
 
