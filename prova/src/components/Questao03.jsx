@@ -31,13 +31,14 @@ const Questao03 = () => {
       }
     };
 
-    fetchData();
+    fetchData(); // o marcelo é foda
   }, []); // O array vazio [] significa que useEffect será executado apenas uma vez, após a montagem do componente
 
   return (
     <div>
       <p>Capital com maior população: {capitals.max}</p>
       <p>Capital com menor população: {capitals.min}</p>
+      
     </div>
   );
 };
